@@ -68,3 +68,7 @@
 | webpack-bundle-analyzer         | Generate report of what's in the app's production bundle         |
 | webpack-cli                     | Run Webpack via the command line                                 |
 | webpack-dev-server              | Serve app via Webpack                                            |
+
+## Wiki
+
+[Normalizing State Shape](https://redux.js.org/recipes/structuring-reducers/normalizing-state-shape)
