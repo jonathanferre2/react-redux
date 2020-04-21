@@ -8,7 +8,7 @@ import { newCourse } from "../../../tools/mockData";
 import Spinner from "../common/Spinner";
 import { toast } from "react-toastify";
 
-function ManageCoursePage({
+export function ManageCoursePage({
   courses,
   authors,
   loadAuthors,
@@ -54,8 +54,8 @@ function ManageCoursePage({
     if (!category) errors.category = "Category is required";
 
     setErrors(errors);
-    // From is valid if the errros object still has no properties
-    return Object.keys(errors.length === 0);
+    // Form is valid if the errors object still has no properties
+    return Object.keys(errors).length === 0;
   }
 
   function handleSave(event) {
@@ -64,11 +64,10 @@ function ManageCoursePage({
     setSaving(true);
     saveCourse(course)
       .then(() => {
-        toast.success("Course Saved.");
+        toast.success("Course saved.");
         history.push("/courses");
       })
       .catch((error) => {
-        //Server side validation
         setSaving(false);
         setErrors({ onSave: error.message });
       });
