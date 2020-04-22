@@ -20,7 +20,7 @@ it("should add course when passed CREATE_COURSE_SUCCESS", () => {
   console.log(action);
 
   // act
-  const newState = courseReducer(action, initialState);
+  const newState = courseReducer(initialState, action);
 
   // assert
   expect(newState.length).toEqual(3);

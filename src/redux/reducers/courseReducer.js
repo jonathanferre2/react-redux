@@ -3,7 +3,7 @@ import initialState from "./initialState";
 
 export default function courseReducer(state = initialState.courses, action) {
   switch (action.type) {
-    case types.CREATE_COURSE:
+    case types.CREATE_COURSE_SUCCESS:
       // state.push(action.course); No usar
       return [...state, { ...action.course }];
     case types.UPDATE_COURSE_SUCCESS:
